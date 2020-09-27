@@ -12,7 +12,7 @@
 						</div>
 						
 						<div class="pull-left logo-box">
-							<div class="logo"><a href="index.html"><img src="{$maccms.path_tpl}images/logo.png" alt="" title=""></a></div>
+							<div class="logo"><a href="index.html"><img src="{$maccms.path_tpl}images/logo.png" alt="" title="" width="180px" height="50px"></a></div>
 							<div class="dark-layout-logo"><a href="index.html"><img src="{$maccms.path_tpl}images/logo-4.png" alt="" title=""></a></div>
 						</div>
 						
@@ -45,44 +45,17 @@
 
 								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 									<ul class="navigation clearfix">
-										<li class="dropdown"><a href="#">Course</a>
+										{maccms:type ids="" order="asc" by="sort" id="vo1" key="key1"}
+										{if condition="$key1 lt 3"}
+										<li class="dropdown"><a href="#">{$vo1.type_name}</a>
 											<ul>
-												<li><a href="featured-courses.html">Featured Courses</a></li>
-												<li><a href="latest-courses.html">Latest Courses</a></li>
-												<li><a href="category.html">Course Categories</a></li>
-												<li><a href="course-detail.html">Course Landing</a></li>
-												<li><a href="course-lesson.html">Course Lesson</a></li>
+												{maccms:type parent="'.$vo1['type_id'].'" order="asc" by="sort" id="vo2" key="key2"}
+												<li><a href="{:mac_url_type($vo2,[],'show')}">{$vo2.type_name}</a></li>
+												{/maccms:type}
 											</ul>
 										</li>
-										<li class="dropdown"><a href="#">Instructor</a>
-											<ul>
-												<li><a href="dashboard.html">Instructor Dashboard</a></li>
-												<li><a href="manage-course.html">Manage Courses</a></li>
-												<li><a href="edit-course.html">Edit Course</a></li>
-												<li><a href="earning.html">Earnings</a></li>
-												<li><a href="instructor-profile.html">Instructor Profile</a></li>
-												<li><a href="team.html">Popular Instructors</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Student</a>
-											<ul>
-												<li><a href="enrolled-courses.html">Enrolled Courses</a></li>
-												<li><a href="certificate.html">Certificate Center</a></li>
-												<li><a href="test.html">Quiz</a></li>
-												<li><a href="result.html">Quiz Result</a></li>
-												<li><a href="student-profile.html">Student Profile</a></li>
-											</ul>
-										</li>
-										<li class="dropdown"><a href="#">Pages</a>
-											<ul>
-												<li><a href="price.html">Subscription</a></li>
-												<li><a href="blog.html">Blog</a></li>
-												<li><a href="blog-detail.html">Blog Detail</a></li>
-												<li><a href="not-found.html">Error Page</a></li>
-												<li><a href="coming-soon.html">Coming Soon</a></li>
-												<li><a href="checkout.html">Checkout</a></li>
-											</ul>
-										</li>
+										{/if}
+										{/maccms:type}
 									</ul>
 								</div>
 								
@@ -140,22 +113,22 @@
 							<!-- Profile Box -->
 							<div class="profile-box dropdown" id="someElementID5">
 								<div class="btn btn-default dropdown-toggle">
-									<span class="profile-image"><img src="{$maccms.path_tpl}images/resource/author-4.jpg" alt="" /></span> <i class="arrow flaticon-down-arrow"></i>
+									<span class="profile-image"><img src="{$maccms.path_tpl}images/my.svg" alt="" /></span> <i class="arrow flaticon-down-arrow"></i>
 								</div>
 								<div class="profile-content">
-									<div class="setting"><a href="setting.html">Settings</a></div>
+									<div class="setting"><a >个性设置</a></div>
 									<!-- Dark Mode -->
 									<div class="dark-mode">
 										<div class="clearfix">
 											<div class="pull-left">
-												<div class="mode"><span class="icon"><img src="{$maccms.path_tpl}images/icons/moon.png" alt="" /></span> Dark Mode</div>
+												<div class="mode"><span class="icon"><img src="{$maccms.path_tpl}images/icons/moon.png" alt="" /></span> 夜间模式</div>
 											</div>
 											<div class="pull-right">
 												<!-- Dark Btns -->
 												<ul class="dark-buttons clearfix">
-													<li data-tab="#" class="off">Off</li>
+													<li data-tab="#" class="off">关</li>
 													<li class="boll"><span class="round"></span></li>
-													<li data-tab="#" class="on">On</li>
+													<li data-tab="#" class="on">开</li>
 												</ul>	
 											</div>
 										</div>

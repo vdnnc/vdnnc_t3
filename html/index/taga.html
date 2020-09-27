@@ -1,41 +1,21 @@
+{maccms:type ids="" order="asc" by="sort" id="vo1" key="key1"}
+{if condition="$key1 lt 3"}
 <div class="sidebar-widget tags-widget">
-							<div class="widget-content">
-								<div class="sidebar-title">
-									<h6>Popular Topics</h6>
-								</div>
-								<div class="content">
-									<ul>
-										<li><a href="#">Animation</a></li>
-										<li><a href="#">WordPress</a></li>
-										<li><a href="#">Bootstrap</a></li>
-										<li><a href="#">User Interface</a></li>
-										<li><a href="#">Web Design</a></li>
-										<li><a href="#">Photoshop</a></li>
-										<li><a href="#">Responsive Design</a></li>
-										<li><a href="#">Figma</a></li>
-										<li><a href="#">Adobe XD</a></li>
-										<li><a href="#">Sketch</a></li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						
-						<!-- Categories Widget -->
-                        <div class="sidebar-widget categories-widget">
-							<div class="widget-content">
-								<div class="sidebar-title">
-									<h6>Top Categories</h6>
-								</div>
-								<div class="content">
-									<ul>
-										<li><a href="category.html"><span class="icon flaticon-web-programming"></span>Development</a></li>
-										<li><a href="category.html"><span class="icon flaticon-pie-chart"></span>Business</a></li>
-										<li><a href="category.html"><span class="icon flaticon-megaphone"></span>Marketing</a></li>
-										<li><a href="category.html"><span class="icon flaticon-computer"></span>IT and Software</a></li>
-										<li><a href="category.html"><span class="icon flaticon-picture"></span>Photography</a></li>
-										<li><a href="category.html"><span class="icon flaticon-ux"></span>UX Design</a></li>
-									</ul>
-									<a href="category.html" class="all-category">View All Categories</a>
-								</div>
-							</div>
-						</div>
+	<div class="widget-content">
+		<div class="sidebar-title">
+			<h6>{$vo1.type_name}</h6>
+		</div>
+		<div class="content">
+			<ul>
+				{maccms:type parent="'.$vo1['type_id'].'" order="asc" by="sort" id="vo2" key="key2"}
+				<li><a href="{:mac_url_type($vo2,[],'show')}">{$vo2.type_name}</a></li>
+				{/maccms:type}
+			</ul>
+		</div>
+	</div>
+</div>
+{/if}
+{/maccms:type}
+
+
+

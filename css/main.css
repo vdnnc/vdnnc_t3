@@ -6049,6 +6049,28 @@ img{
 	overflow:hidden;
 	box-shadow:0px 10px 15px rgba(0,0,0,0.07);
 }
+.news-detail .inner-box .vodplay{
+	position:relative;
+	border-radius:8px;
+	overflow:hidden;
+	box-shadow:0px 10px 15px rgba(0,0,0,0.07);
+}
+@media (max-width: 2000px) {
+.vodplay{
+	height: 400px;
+}
+}
+@media (max-width: 700px) {
+.vodplay{
+	height: 200px;
+}
+}
+
+@media (max-width: 400px) {
+.vodplay{
+	height: 200px;
+}
+}
 
 .news-detail .inner-box .image img{
 	position:relative;

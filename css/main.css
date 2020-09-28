@@ -2209,7 +2209,7 @@ img{
 
 .sidebar-page-container{
 	position:relative;
-	padding:70px 0px 45px;
+	
 }
 
 .sidebar-page-container .content-side,
@@ -6071,7 +6071,29 @@ img{
 	height: 200px;
 }
 }
+.news-detail .inner-box .bookplay{
+	position:relative;
+	border-radius:8px;
+	overflow:hidden;
+	height: 800px;
+	box-shadow:0px 10px 15px rgba(0,0,0,0.07);
+}
+@media (max-width: 2000px) {
+.bookplay{
+	height: 800px;
+}
+}
+@media (max-width: 700px) {
+.bookplay{
+	height: 10000px;
+}
+}
 
+@media (max-width: 400px) {
+.bookplay{
+	height: 2000px;
+}
+}
 .news-detail .inner-box .image img{
 	position:relative;
 	width:100%;

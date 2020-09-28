@@ -17,6 +17,8 @@ Html5+Css+js
 
 使用详情请见：[VDnnc站长社区-T3说明帖子](https://www.vdnnc.com/i/n6885n1c1.html)
 
+模板制作进度：未完成·请不要下载使用！
+
 #### 网页布局预览
 ![概念图](https://images.gitee.com/uploads/images/2020/0927/221339_1f017235_1356409.png "huaban.png")
 

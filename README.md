@@ -20,7 +20,7 @@ Html5+Css+js+Jq
 
 使用详情请见：[VDnnc站长社区-T3说明帖子](https://www.vdnnc.com/i/n6885n1c1.html)
 
-模板制作进度：未完成·请不要下载使用！
+模板制作进度：以完成,等待更多优化！
 
 #### 网页布局预览
 [演示地址](http://t3.demo.vdnnc.com/)

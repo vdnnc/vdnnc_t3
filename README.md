@@ -18,7 +18,7 @@ Html5+Css+js+Jq
 
 #### 使用说明
 
-使用详情请见：[VDnnc站长社区-T3说明帖子](https://www.vdnnc.com/i/n6885n1c1.html)
+使用详情与帮助请见（必看/必看/必看/必看/）：[VDnnc站长社区-T3说明帖子](https://www.vdnnc.com/i/n6885n1c1.html)
 
 模板制作进度：以完成,等待更多优化！
 

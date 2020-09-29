@@ -18,9 +18,9 @@
 						
 						<!-- Search -->
                         <div class="search-box">
-                        	<form method="post" action="contact.html">
+                        	<form method="post" action="{:mac_url('vod/search')}">
                                 <div class="form-group">
-                                    <input type="search" name="search-field" value="" placeholder="Search course name" required>
+                                    <input type="search" name="wd" value="{$param.wd}" placeholder="搜一下吧" required>
                                     <button type="submit"><span class="icon fa fa-search"></span></button>
                                 </div>
                             </form>

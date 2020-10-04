@@ -107,11 +107,11 @@
 									<div class="text">
 									{maccms:foreach name="obj.vod_play_list" id="vo" key="key"}	
 										<h6><a name="{$vo.player_info.from}"></a>{$vo.player_info.show}-在线目录</h6>
-										<p>
+										<ul class="list-style-one">
 										{maccms:foreach name="vo.urls" id="vo2" key="key2"}
-										<a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}" target="{$vo.player_info.target}" >{$vo2.name}</a>&nbsp;&nbsp;&nbsp; 
+										<li><a href="{:mac_url_vod_play($obj,['sid'=>$vo.sid,'nid'=>$vo2.nid])}" target="{$vo.player_info.target}" >{$vo2.name}</a></li>
 										{/maccms:foreach}
-										</p>
+										</ul>
 									{/maccms:foreach}	
 									</div><a name="lxxz"></a>
 									<ul class="list-style-one">

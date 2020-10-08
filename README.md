@@ -6,6 +6,13 @@
 #### 软件架构
 Html5+Css+js+Jq
 
+## 更新日记
+![更新日记](https://gitee.com/vdnnc/vdnnc_t3/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b "更新日记")
+
+
+#### 更新须知
+
+更新前请备份 html/id 中的文件
 
 #### 模板功能
 

@@ -1,3 +1,9 @@
+[![微度工作室/MacCms综合内容网站模板_代号：t3](https://gitee.com/vdnnc/vdnnc_t3/widgets/widget_card.svg?colors=000000,b8b2b8,ffffff,000000,666666,000000)](https://gitee.com/vdnnc/vdnnc_t3)
+#### 更新须知
+
+更新前请备份 html/id 中的文件
+然后上传文件覆盖即可完成更新
+
 # MacCms综合内容网站模板_代号：t3
 
 #### 介绍
@@ -5,14 +11,6 @@
 
 #### 软件架构
 Html5+Css+js+Jq
-
-## 更新日记
-![更新日记](https://gitee.com/vdnnc/vdnnc_t3/widgets/widget_card.svg?colors=4183c4,ffffff,ffffff,e3e9ed,666666,9b9b9b "更新日记")
-
-
-#### 更新须知
-
-更新前请备份 html/id 中的文件
 
 #### 模板功能
 

@@ -23,17 +23,16 @@
 <footer class="main-footer">
 		<!-- Pattern Layer -->
 		
-		<!-- Upper Box -->
+
 		<div class="upper-box">
 			<div class="auto-container">
-				<h4>{$maccms.site_name}搜索</h4>
+				<h4>[{$maccms.site_name}]搜索</h4>   
 				
-				<!-- Subscribe Form -->
 				<div class="subscribe-form">
 					<form method="post" name="search" action="{:mac_url('vod/search')}">
 						<div class="form-group clearfix">
 							<span class="icon flaticon-mail"></span>
-							<input type="text" name="wd" value="{$param.wd}" placeholder="输入您要找的关键字" required="">
+							<input type="text" name="wd" value="{$param.wd}" placeholder="请输入您要找的内容" required="">
 							<button type="submit" class="theme-btn btn-style-one"><span class="txt">搜一下</span></button>
 						</div>
 					</form>

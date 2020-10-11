@@ -97,7 +97,13 @@
 							<!-- Profile Box -->
 							<div class="profile-box dropdown" id="someElementID5">
 								<div class="btn btn-default dropdown-toggle">
-									<span class="profile-image"><img src="{$maccms.path_tpl}images/my.svg" alt="" /></span> <i class="arrow flaticon-down-arrow"></i>
+									<span class="profile-image">
+                                      {if condition="$GLOBALS['user']['user_id']" gt 0}
+                                      <img src="{$user.user_id|mac_get_user_portrait}" alt="" />
+                                      {else/}
+                                      <img src="{$maccms.path_tpl}images/my.svg" alt="" />
+                                      {/if}
+                                  </span> <i class="arrow flaticon-down-arrow"></i>
 								</div>
 								<div class="profile-content">
 									<div class="setting"><a >个性中心</a></div>
@@ -119,8 +125,21 @@
 									</div>
 									<!-- Pages -->
 									<ul class="pages">
-										<li><a href="">登录</a></li>
-										<li><a href="">注册</a></li>
+                          {if condition="$GLOBALS['user']['user_id']" gt 0}            
+                         <li><a >ID:{$user.user_id}</a></li>
+					    <li><a >Name:{$user.user_name}</a></li>
+					    <li><a >登录次:{$user.user_login_num}</a></li>
+					    <li><a >积分:{$user.user_points}</a></li>
+					    <li><a href="{:mac_url('user/index')}">个人中心</a></li>
+					    <li><a href="{:mac_url('user/info')}">修改资料</a></li>
+                        <li><a href="{:mac_url('user/favs')}">我的收藏</a></li>					    
+					    <li><a href="{:url('user/logout')}">退出</a></li>
+                         {else/}             
+						<li><a href="javascript:;" class="mac_user">登录</a> </li> 
+                        <li> <a href="{:mac_url('user/reg')}">注册</a> </li>
+                          {/if}            
+                                      
+                                      
 									</ul>
 								</div>
 							</div>
@@ -145,4 +164,10 @@
             </nav>
         </div><!-- End Mobile Menu -->
 		
-    
+<span style="display:none" class="mac_ulog_set" alt="设置文章内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.art_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+<span style="display:none" class="mac_ulog_set" alt="设置专题内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.topic_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+<span style="display:none" class="mac_ulog_set" alt="设置内容页浏览记录" data-type="1" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+<span style="display:none" class="mac_ulog_set" alt="设置视频播放记录" data-type="4" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+<span style="display:none" class="mac_ulog_set" alt="设置视频播放记录" data-type="5" data-mid="{$maccms.mid}" data-id="{$obj.vod_id}" data-sid="{$param.sid}" data-nid="{$param.nid}"></span>
+<span style="display:none" class="mac_history_set" alt="设置History历史记录" data-name="[{$obj.type.type_name}]{$obj.vod_name}" data-pic="{$obj.vod_pic|mac_url_img}"></span>
+<span class="mac_history" style="display:none;"></span>
